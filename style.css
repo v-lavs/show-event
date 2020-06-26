@@ -52,6 +52,7 @@ body {
 .btn {
   display: inline-block;
   font-size: 16px;
+  font-family: Heebo, sans-serif;
 }
 
 .btn-restart {
@@ -103,6 +104,8 @@ body {
   background-color: #31CC8E;
   border-radius: 25px;
   padding: 13px 10px;
+  color: #000000;
+  font-size: 16px;
   text-align: center;
   border: none;
 }
