@@ -1,0 +1,234 @@
+body {
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.section-filter-show {
+  position: relative;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 100px;
+  background-color: #072F36;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-filter-show {
+  width: 100%;
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+}
+
+.title-filter-show {
+  color: #31CC8E;
+  font-family: Heebo, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-restart {
+  position: absolute;
+  display: flex;
+  left: 0;
+  z-index: 2;
+  align-items: center;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-close {
+  position: relative;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-left: 8px;
+}
+
+.icon-close:before,
+.icon-close:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #FFFFFF;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.icon-close:before {
+  transform: rotate(135deg);
+}
+
+.icon-close:after {
+  transform: rotate(-135deg);
+}
+
+.btn-submit {
+  font-weight: 500;
+  width: 56%;
+  background-color: #31CC8E;
+  border-radius: 25px;
+  padding: 13px 10px;
+  text-align: center;
+  border: none;
+}
+
+.form-filter-show .wrap-btn-submit {
+  text-align: center;
+}
+
+.form-filter-show .fieldboxs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-filter-show .form-group {
+  width: 23%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.event-parameters {
+  padding-top: 12px;
+}
+
+.select-show-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*----------- custom select------------*/
+.nice-select {
+  position: relative;
+  background-color: #072F36;
+  border-width: 2px;
+  border-radius: 25px;
+  color: #31CC8E;
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nice-select:after {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #31CC8E transparent transparent transparent;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.nice-select.open:after {
+  transform: rotate(-135deg);
+}
+
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #FFFFFF;
+}
+
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+  background-color: rgba(48, 188, 85, .3);
+  color: #FFFFFF;
+}
+
+.nice-select .list {
+  box-shadow: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.custom-select option {
+  font-size: 16px;
+  font-weight: 300;
+  min-height: 42px;
+
+}
+
+/*-----------end custom select------------*/
+.event-parameters {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+/*----------- custom checkbox-------------*/
+.label-checkmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 15px;
+  margin-right: 22px;
+  margin-bottom: 20px;
+  padding-right: 22px;
+}
+
+.checkmark {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+}
+
+.check-mark {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background-color: #072F36;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  -webkit-transition: .35s;
+  -o-transition: .35s;
+  -moz-transition: .35s;
+  transition: .35s;
+  margin-right: -22px;
+}
+
+.checkmark:checked + .check-mark {
+  border-color: #31CC8E;
+  background-color: #31CC8E;
+}
+
