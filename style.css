@@ -205,6 +205,8 @@ body {
   margin-right: 22px;
   margin-bottom: 20px;
   padding-right: 22px;
+  transition: .35s
+;
 }
 
 .checkmark {
