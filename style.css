@@ -133,7 +133,6 @@ body {
 
 .form-filter-show .form-group {
   width: 23%;
-  max-width: 250px;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -281,8 +280,7 @@ body {
 }
 @media all and (max-width: 860px){
   .form-filter-show .form-group {
-    width: 48%;
-    max-width: 360px;
+    width: 45%;
   }
   .btn-submit {
     width: 65%;
@@ -318,7 +316,8 @@ body {
 
   .btn-submit {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
+    max-width: 327px;
   }
   .btn-restart-mobile{
     display: inline-flex;
