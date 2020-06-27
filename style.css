@@ -491,6 +491,7 @@ body {
     padding-bottom: 60px;
   }
 }
+
 @media all and (max-width: 380px) {
   .search-list-item {
     width: 100%;
