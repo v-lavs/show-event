@@ -298,6 +298,10 @@ body {
   .title-filter-show {
     margin-bottom: 50px;
   }
+  .form-filter-show{
+    padding-bottom: 25px;
+  }
+
   .form-filter-show .form-group {
     width: 100%;
     margin: 0 auto 23px;
