@@ -237,6 +237,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
+  opacity: 0;
 }
 
 .check-mark {
