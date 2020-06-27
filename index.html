@@ -15,140 +15,234 @@
 <body>
 <div class="wrapper">
     <section class="section-filter-show">
-        <div class="container">
-            <form action="#" class="form-filter-show" method="post">
-                <div class="heading">
-                    <h3 class="title-filter-show">אז איפה בא לך להופיע?</h3>
-                    <button type="button" class="btn btn-restart"><span class="icon-close"></span>אפס חיפוש</button>
+        <div class="bg-dark">
+            <div class="container">
+                <form action="#" class="form-filter-show" method="post">
+                    <div class="heading">
+                        <h3 class="title-filter-show">אז איפה בא לך להופיע?</h3>
+                        <button type="button" class="btn btn-restart"><span class="icon-close"></span>אפס חיפוש</button>
+                    </div>
+                    <div class="fieldboxs">
+                        <div class="form-group">
+                            <label for="district" class="select-show-label">מחוז</label>
+                            <select name="district" class="nice-select custom-select form-control" id="district">
+                                <option value="מרכז">מרכז</option>
+                                <option value="צפון">צפון</option>
+                                <option value="דרום">דרום</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sity" class="select-show-label">עיר</label>
+                            <select name="sity" class="nice-select custom-select form-control" id="sity">
+                                <option value="תל אביב">תל אביב</option>
+                                <option value="פתח תקווה">פתח תקווה</option>
+                                <option value="מודיעין">מודיעין</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="manyPeople" class="select-show-label">כמות מוזמנים</label>
+                            <select name="many-people" class="nice-select custom-select form-control" id="manyPeople">
+                                <option value="0-20">0-20</option>
+                                <option value="20-30">20-30</option>
+                                <option value="40-50">40-50</option>
+                                <option value="+50">+50</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment" class="select-show-label">פרטי תשלום להופעה</label>
+                            <select name="payment" class="nice-select custom-select form-control" id="payment">
+                                <option value="גרנטי">גרנטי</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="age" class="select-show-label">הגבלת גיל</label>
+                            <select name="age" class="nice-select custom-select form-control" id="age">
+                                <option data-display="18+" value="none" hidden="">18+</option>
+                                <option value="מתחת ל-18">מתחת ל-18</option>
+                                <option value="18+">18+</option>
+                                <option value="21+">21+</option>
+                                <option value="24+">24+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="performance-club" class="select-show-label">סוג המקום</label>
+                            <select name="performance-club" class="nice-select custom-select form-control"
+                                    id="performance-club">
+                                <option value="מועדון הופעות">מועדון הופעות</option>
+                                <option value="בר/פאב">בר/פאב</option>
+                                <option value="מסעדה">מסעדה</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="atmosphere" class="select-show-label">אווירה</label>
+                            <select name="atmosphere" class="nice-select custom-select form-control" id="atmosphere">
+                                <option value="אקוסטי">אקוסטי</option>
+                                <option value="מזרחית">מזרחית</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="musicStyle" class="select-show-label">סגנון מוזיקה</label>
+                            <select name="music-style" class="nice-select custom-select form-control" id="musicStyle">
+                                <option value="רוק">רוק</option>
+                                <option value="פאנק">פאנק</option>
+                                <option value="אקוסטי">אקוסטי</option>
+                                <option value="ישראלי">ישראלי</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="event-parameters">
+                        <label for="openStage" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="openStage" value="">
+                            <span class="check-mark"></span>
+                            במה פתוחה
+                        </label>
+
+                        <label for="localAudience" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="localAudience" value>
+                            <span class="check-mark"></span>
+                            קהל מקומי
+                        </label>
+
+                        <label for="seats" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="seats" value>
+                            <span class="check-mark"></span>
+                            מקומות ישיבה
+                        </label>
+
+                        <label for="shabbatKeeper" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="shabbatKeeper" value>
+                            <span class="check-mark"></span>
+                            שומר שבת
+                        </label>
+
+                        <label for="accessDisabled" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="accessDisabled" value>
+                            <span class="check-mark"></span>
+                            גישה לנכים
+                        </label>
+
+                        <label for="lunchPerformances" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="lunchPerformances" value>
+                            <span class="check-mark"></span>
+                            הופעות צהריים
+                        </label>
+
+                        <label for="parking" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="parking" value>
+                            <span class="check-mark"></span>
+                            חניה במקום
+                        </label>
+
+                        <label for="equipmentPlace" class="label-checkmark">
+                            <input type="checkbox" class="checkmark" id="equipmentPlace" value>
+                            <span class="check-mark"></span>
+                            ציוד במקום
+                        </label>
+                    </div>
+
+                    <div class="wrap-btn-submit">
+                        <button type="submit" class="btn btn-submit">תמצאו לי מקום להופעה!</button>
+                        <button type="button" class="btn btn-restart-mobile"><span class="icon-close"></span>אפס חיפוש
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="search-result">
+<div class="container">
+    <div class="heading">
+        <h3 class="title-filter-show">נמצאו <strong class="quantity">129</strong> מקומות להופעה שלך!</h3>
+    </div>
+    <ul class="search-list">
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
                 </div>
-                <div class="fieldboxs">
-                    <div class="form-group">
-                        <label for="district" class="select-show-label">מחוז</label>
-                        <select name="district" class="nice-select custom-select form-control" id="district">
-                            <option value="מרכז">מרכז</option>
-                            <option value="צפון">צפון</option>
-                            <option value="דרום">דרום</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="sity" class="select-show-label">עיר</label>
-                        <select name="sity" class="nice-select custom-select form-control" id="sity">
-                            <option value="תל אביב">תל אביב</option>
-                            <option value="פתח תקווה">פתח תקווה</option>
-                            <option value="מודיעין">מודיעין</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="manyPeople" class="select-show-label">כמות מוזמנים</label>
-                        <select name="many-people" class="nice-select custom-select form-control" id="manyPeople">
-                            <option value="0-20">0-20</option>
-                            <option value="20-30">20-30</option>
-                            <option value="40-50">40-50</option>
-                            <option value="+50">+50</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="payment" class="select-show-label">פרטי תשלום להופעה</label>
-                        <select name="payment" class="nice-select custom-select form-control" id="payment">
-                            <option value="גרנטי">גרנטי</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="age" class="select-show-label">הגבלת גיל</label>
-                        <select name="age" class="nice-select custom-select form-control" id="age">
-                            <option data-display="18+" value="none" hidden="">18+</option>
-                            <option value="מתחת ל-18">מתחת ל-18</option>
-                            <option value="18+">18+</option>
-                            <option value="21+">21+</option>
-                            <option value="24+">24+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="performance-club" class="select-show-label">סוג המקום</label>
-                        <select name="performance-club" class="nice-select custom-select form-control"
-                                id="performance-club">
-                            <option value="מועדון הופעות">מועדון הופעות</option>
-                            <option value="בר/פאב">בר/פאב</option>
-                            <option value="מסעדה">מסעדה</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="atmosphere" class="select-show-label">אווירה</label>
-                        <select name="atmosphere" class="nice-select custom-select form-control" id="atmosphere">
-                            <option value="אקוסטי">אקוסטי</option>
-                            <option value="מזרחית">מזרחית</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="musicStyle" class="select-show-label">סגנון מוזיקה</label>
-                        <select name="music-style" class="nice-select custom-select form-control" id="musicStyle">
-                            <option value="רוק">רוק</option>
-                            <option value="פאנק">פאנק</option>
-                            <option value="אקוסטי">אקוסטי</option>
-                            <option value="ישראלי">ישראלי</option>
-                        </select>
-                    </div>
+                <div class="card-place-body" style="background-image: url(test-img.jpg);"></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
                 </div>
-
-                <div class="event-parameters">
-                    <label for="openStage" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="openStage" value="">
-                        <span class="check-mark"></span>
-                        במה פתוחה
-                    </label>
-
-                    <label for="localAudience" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="localAudience" value>
-                        <span class="check-mark"></span>
-                        קהל מקומי
-                    </label>
-
-                    <label for="seats" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="seats" value>
-                        <span class="check-mark"></span>
-                        מקומות ישיבה
-                    </label>
-
-                    <label for="shabbatKeeper" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="shabbatKeeper" value>
-                        <span class="check-mark"></span>
-                        שומר שבת
-                    </label>
-
-                    <label for="accessDisabled" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="accessDisabled" value>
-                        <span class="check-mark"></span>
-                        גישה לנכים
-                    </label>
-
-                    <label for="lunchPerformances" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="lunchPerformances" value>
-                        <span class="check-mark"></span>
-                        הופעות צהריים
-                    </label>
-
-                    <label for="parking" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="parking" value>
-                        <span class="check-mark"></span>
-                        חניה במקום
-                    </label>
-
-                    <label for="equipmentPlace" class="label-checkmark">
-                        <input type="checkbox" class="checkmark" id="equipmentPlace" value>
-                        <span class="check-mark"></span>
-                        ציוד במקום
-                    </label>
+                <div class="card-place-body "></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
                 </div>
-
-                <div class="wrap-btn-submit">
-                    <button type="submit" class="btn btn-submit">תמצאו לי מקום להופעה!</button>
-                    <button type="button" class="btn btn-restart-mobile"><span class="icon-close"></span>אפס חיפוש</button>
+                <div class="card-place-body "></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
                 </div>
-            </form>
+                <div class="card-place-body "></div>
+            </div>
+        </li>
+
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
+                </div>
+                <div class="card-place-body" style="background-image: url(test-img.jpg);"></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
+                </div>
+                <div class="card-place-body "></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
+                </div>
+                <div class="card-place-body "></div>
+            </div>
+        </li>
+        <li class="search-list-item">
+            <div class="card-place">
+                <div class="card-place-header">
+                    <h4 class="name-place">שם המקום</h4>
+                    <span class="address-place">כתובת המקום</span>
+                </div>
+                <div class="card-place-body" style="background-image: url(test-img.jpg);"></div>
+            </div>
+        </li>
+    </ul>
+    <div class="pagination">
+        <a href="#" class="pagination-item"></a>
+        <a href="#" class="pagination-item pagination-item-active"></a>
+        <a href="#" class="pagination-item"></a>
+        <a href="#" class="pagination-item"></a>
+        <a href="#" class="pagination-item"></a>
+        <a href="#" class="pagination-item"></a>
+    </div>
+</div>
         </div>
     </section>
+
+
 </div>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script src="lib/jquery-3.3.1.min.js"></script>
 <script src="lib/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
 <script type='text/javascript'>
@@ -156,8 +250,6 @@
 
         //custom select
         jQuery('.custom-select').niceSelect();
-        console.log('222');
-
 
         //change color label
         jQuery('input:checkbox').click(function () {
