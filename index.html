@@ -147,21 +147,22 @@
         </div>
     </section>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script src="lib/jquery-3.3.1.min.js"></script>
-<script src="lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
-<script>
-    $(document).ready(function () {
+<script src="lib/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js"></script>
+<script type='text/javascript'>
+    jQuery(document).ready(function () {
 
         //custom select
-        $('custom-select').niceSelect();
+        jQuery('custom-select').niceSelect();
+
 
         //change color label
-        $('input:checkbox').click(function () {
-            if ($(this).is(':checked')) {
-                $(this).parent().css('color', '#31CC8E');
+        jQuery('input:checkbox').click(function () {
+            if (jQuery(this).is(':checked')) {
+                jQuery(this).parent().css('color', '#31CC8E');
             } else {
-                $(this).parent().css('color', '#FFFFFF');
+                jQuery(this).parent().css('color', '#FFFFFF');
             }
         });
     });

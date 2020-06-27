@@ -53,6 +53,7 @@ body {
   display: inline-block;
   font-size: 16px;
   font-family: Heebo, sans-serif;
+  outline: none;
 }
 
 .btn-restart {
@@ -128,10 +129,6 @@ body {
   margin-bottom: 50px;
 }
 
-.event-parameters {
-  padding-top: 12px;
-}
-
 .select-show-label {
   display: block;
   margin-bottom: 10px;
@@ -148,6 +145,7 @@ body {
   padding-right: 5px;
   font-size: 16px;
   font-weight: 300;
+  text-align: right !important;
 }
 
 .nice-select:after {
@@ -184,7 +182,7 @@ body {
   border-radius: 10px;
 }
 
-.custom-select option {
+.nice-select option {
   font-size: 16px;
   font-weight: 300;
   min-height: 42px;
@@ -195,6 +193,7 @@ body {
 .event-parameters {
   display: flex;
   justify-content: space-between;
+  padding-top: 12px;
   padding-bottom: 40px;
 }
 
@@ -205,7 +204,6 @@ body {
   align-items: center;
   color: #ffffff;
   font-size: 15px;
-  margin-right: 22px;
   margin-bottom: 20px;
   padding-right: 22px;
   transition: .35s
@@ -236,4 +234,74 @@ body {
   border-color: #31CC8E;
   background-color: #31CC8E;
 }
+/*----------- end custom checkbox-------------*/
 
+/*---------------RESPONSIVE-------------------*/
+@media all and (max-width: 1200px){
+  .container{
+    max-width: 940px;
+  }
+}
+
+@media all and (max-width: 991px){
+  .container{
+    max-width: 860px;
+  }
+  .event-parameters{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .label-checkmark{
+    margin-left: 22px;
+  }
+  .label-checkmark:last-child{
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 860px){
+  .form-filter-show .form-group {
+    width: 48%;
+    max-width: 360px;
+  }
+  .btn-submit {
+    width: 65%;
+  }
+}
+@media all and (max-width: 540px){
+  .title-filter-show {
+    margin-bottom: 15px;
+  }
+  .heading {
+    padding-bottom: 50px;
+  }
+  .btn-restart {
+    transform: translateY(0%);
+  }
+  /*.event-parameters {*/
+    /*justify-content: center;*/
+  /*}*/
+  .btn-submit {
+    width: 80%;
+  }
+  /*.label-checkmark {*/
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+  /*}*/
+}
+
+@media all and (max-width: 480px){
+  .container{
+    max-width: 420px;
+  }
+  .form-filter-show .form-group {
+    width: 100%;
+    max-width: 100%;
+
+  }
+}
+
+@media all and (max-width: 380px){
+  .btn-submit {
+    width: 100%;
+  }
+}
