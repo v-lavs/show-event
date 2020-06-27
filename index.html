@@ -25,8 +25,8 @@
                     <div class="form-group">
                         <label for="district" class="select-show-label">מחוז</label>
                         <select name="district" class="nice-select custom-select form-control" id="district">
-                            <option value="צפון">צפון</option>
                             <option value="מרכז">מרכז</option>
+                            <option value="צפון">צפון</option>
                             <option value="דרום">דרום</option>
                         </select>
                     </div>
@@ -142,6 +142,7 @@
 
                 <div class="wrap-btn-submit">
                     <button type="submit" class="btn btn-submit">תמצאו לי מקום להופעה!</button>
+                    <button type="button" class="btn btn-restart-mobile"><span class="icon-close"></span>אפס חיפוש</button>
                 </div>
             </form>
         </div>
@@ -154,7 +155,8 @@
     jQuery(document).ready(function () {
 
         //custom select
-        jQuery('custom-select').niceSelect();
+        jQuery('.custom-select').niceSelect();
+        console.log('222');
 
 
         //change color label

@@ -27,6 +27,8 @@ body {
 .form-filter-show {
   width: 100%;
   font-family: 'Heebo', sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.25;
@@ -70,7 +72,15 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
+.btn-restart-mobile{
+  display: none;
+  align-items: center;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 4px;
+}
 .icon-close {
   position: relative;
   display: inline-block;
@@ -142,27 +152,31 @@ body {
   border-radius: 25px;
   color: #31CC8E;
   padding-left: 10px;
-  padding-right: 5px;
+  padding-right: 10px;
   font-size: 16px;
   font-weight: 300;
-  text-align: right !important;
+  min-height: 45px;
+  text-align: right!important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .nice-select:after {
   position: relative;
-  top: auto;
-  right: auto;
+  top: -50%;
+  right: 95%;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 5px 4px 0 4px;
   border-color: #31CC8E transparent transparent transparent;
   -webkit-transform: rotate(0);
-  transform: rotate(0);
+  transform: rotate(0) translateY(50%);
 }
 
 .nice-select.open:after {
-  transform: rotate(-135deg);
+  transform: rotate(-180deg);
 }
 
 .nice-select:active, .nice-select.open, .nice-select:focus {
@@ -173,20 +187,27 @@ body {
 .nice-select .option.selected.focus {
   background-color: rgba(48, 188, 85, .3);
   color: #FFFFFF;
+  font-weight: 300;
 }
 
+
 .nice-select .list {
-  box-shadow: none;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  right: 0;
+  background-color: #072F36;
+  border: solid 2px #FFFFFF;
 }
 
-.nice-select option {
+.nice-select .option {
   font-size: 16px;
   font-weight: 300;
   min-height: 42px;
-
+  text-align: right!important;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #2b5252;
 }
 
 /*-----------end custom select------------*/
@@ -194,7 +215,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 12px;
-  padding-bottom: 40px;
+  padding-bottom: 27px;
 }
 
 /*----------- custom checkbox-------------*/
@@ -204,10 +225,10 @@ body {
   align-items: center;
   color: #ffffff;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   padding-right: 22px;
-  transition: .35s
-;
+  transition: .35s;
+  box-sizing: border-box;
 }
 
 .checkmark {
@@ -268,40 +289,44 @@ body {
   }
 }
 @media all and (max-width: 540px){
-  .title-filter-show {
-    margin-bottom: 15px;
-  }
-  .heading {
-    padding-bottom: 50px;
-  }
-  .btn-restart {
-    transform: translateY(0%);
-  }
-  /*.event-parameters {*/
-    /*justify-content: center;*/
-  /*}*/
-  .btn-submit {
-    width: 80%;
-  }
-  /*.label-checkmark {*/
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
-  /*}*/
-}
-
-@media all and (max-width: 480px){
   .container{
-    max-width: 420px;
+    max-width: 386px;
+  }
+  .section-filter-show {
+    padding-bottom: 60px;
+  }
+  .title-filter-show {
+    margin-bottom: 50px;
   }
   .form-filter-show .form-group {
     width: 100%;
-    max-width: 100%;
-
+    margin: 0 auto 23px;
   }
-}
+  .form-filter-show .fieldboxs {
+    padding-bottom: 20px;
+  }
+  .select-show-label {
+    display: none;
+  }
+  .btn-restart {
+    display: none;
+  }
 
-@media all and (max-width: 380px){
   .btn-submit {
     width: 100%;
+    margin-bottom: 15px;
+  }
+  .btn-restart-mobile{
+    display: inline-flex;
+  }
+  .label-checkmark {
+    width: 47%;
+    margin-left: 0;
+  }
+  .event-parameters {
+    justify-content: space-between;
   }
 }
+
+
+
